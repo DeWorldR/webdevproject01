@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตารางเรียน</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-green-300 to-white text-sm">
+  <!-- ส่วนหัว -->
+  <div class="bg-green-900 text-white p-4">
+    <h1 class="text-xl font-bold">6704101367 : นายวรพล จำปาโชค</h1>
+  </div>
+
+  <!-- ข้อมูลส่วนตัว -->
+  <div class="bg-gray-100 p-4 border border-gray-300">
+    <h2 class="text-blue-600 font-semibold mb-2">ตารางเรียน/สอบของรายวิชาที่ลงทะเบียนไว้แล้ว</h2>
+    <div class="grid grid-cols-2 gap-2">
+      <div>ชื่อ: วรพล จำปาโชค</div>
+      <div>สถานภาพ: กำลังศึกษา</div>
+      <div>คณะ: วิทยาศาสตร์</div>
+      <div>หลักสูตร: วิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์</div>
+      <div>สาขาวิชา: วิทยาการคอมพิวเตอร์</div>
+      <div>อ. ที่ปรึกษาผู้ช่วย: ผู้ช่วยศาสตราจารย์ภานุวัฒน์ เมฆะ</div>
+    </div>
+    <p class="mt-2">📘 <strong>ปี 2 เทอม 1</strong></p>
+  </div>
+
+  <!-- ตารางเรียน -->
+  <div class="overflow-auto mt-4 border border-gray-400">
+    <table class="table-auto w-full border-collapse text-center">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="border px-2">Day/Time</th>
+          <th class="border px-2">8:00-9:00</th>
+          <th class="border px-2">9:00-10:00</th>
+          <th class="border px-2">10:00-11:00</th>
+          <th class="border px-2">11:00-12:00</th>
+          <th class="border px-2">12:00-13:00</th>
+          <th class="border px-2">13:00-14:00</th>
+          <th class="border px-2">14:00-15:00</th>
+          <th class="border px-2">15:00-16:00</th>
+          <th class="border px-2">16:00-17:00</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border font-bold">จันทร์</td>
+          <td></td>
+          <td colspan="3" class="border bg-blue-200">10301231<br>Lab คอม3-4</td>
+          <td></td>
+          <td colspan="2" class="border bg-red-200">10700313<br>Lab คอม3-4</td>
+          <td colspan="2" class="border bg-green-200">10301211<br>ศร306</td>
+        </tr>
+        <tr>
+          <td class="border font-bold">อังคาร</td>
+          <td colspan="2" class="border bg-yellow-100">10301231<br>Lab คอม3-4</td>
+          <td colspan="3"></td>
+          <td colspan="2" class="border bg-green-100">10301225<br>3203</td>
+          <td style="width: 0;"></td>
+          <td colspan="7"></td>
+        </tr>
+        <tr>
+          <td class="border font-bold">พุธ</td>
+          <td colspan="3" class="border bg-green-100">10301225<br>3203</td>
+          <td colspan="6"></td>
+
+        </tr>
+        <tr>
+          <td class="border font-bold">พฤหัสบดี</td>
+          <td colspan="2"></td>
+          <td colspan="2" class="border bg-indigo-100">10301223<br>Lab คอม3-4</td>
+          <td colspan="5"></td>
+        </tr>
+        <tr>
+          <td class="border font-bold">ศุกร์</td>
+          <td colspan="3" class="border bg-blue-100">10301211<br>3203</td>
+          <td colspan="6"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ตารางสอบ -->
+  <div class="overflow-x-auto mt-8 border border-gray-400">
+    <h3 class="bg-green-700 text-white p-2 text-center font-bold">ตารางสอบ</h3>
+    <table class="table-auto w-full border-collapse text-sm">
+      <thead class="bg-cyan-100">
+        <tr>
+          <th class="border px-2 py-1">รหัสวิชา</th>
+          <th class="border px-2 py-1">ชื่อวิชา</th>
+          <th class="border px-2 py-1">กลุ่ม</th>
+          <th class="border px-2 py-1">สอบกลางภาค</th>
+          <th class="border px-2 py-1">สอบปลายภาค</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-yellow-50">
+          <td class="border">10301211</td>
+          <td class="border">Mathematics for Computer Science</td>
+          <td class="border">1</td>
+          <td class="border">22 ส.ค. 2568<br>เวลา 08:00-11:00</td>
+          <td class="border">-</td>
+        </tr>
+        <tr class="bg-blue-50">
+          <td class="border">10301222</td>
+          <td class="border">Data Structure and Algorithm</td>
+          <td class="border">1</td>
+          <td class="border">18 ส.ค. 2568<br>เวลา 12:00-15:00</td>
+          <td class="border">-</td>
+        </tr>
+        <tr class="bg-green-50">
+          <td class="border">10301225</td>
+          <td class="border">Structured Relational Database</td>
+          <td class="border">1</td>
+          <td class="border">20 ส.ค. 2568<br>เวลา 15:00-18:30</td>
+          <td class="border">N/A</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-xs mt-2 text-gray-600 px-2">หมายเหตุ: C = Lecture, L = Lab, R = ประชุม, S = Self Study, T = ติว</p>
+  </div>
+</body>
+</html>
