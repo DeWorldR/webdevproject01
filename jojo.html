@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REG_MJU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+<!-- Navbar -->
+<header class="bg-green-800 shadow-md fixed w-full z-50 rounded-lg">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-24 text-black">
+
+    <!-- Logo + Title -->
+    <div class="flex items-center space-x-4">
+      <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png" alt="โลโก้มหาวิทยาลัย" class="w-24 h-auto">
+      <h1 class="text-2xl font-bold text-black">MEAJO UNIVERSITY</h1>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 items-center text-lg">
+      <a href="#" class="border border-black  px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">หน้าแรก</a>
+
+      <div class="relative group">
+        <button class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">เข้าสู่ระบบ</button>
+        <div class="absolute hidden group-hover:block top-full mt-2 bg-white text-black border rounded-md shadow-md p-2 space-y-2">
+          <button class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">สำหรับนักศึกษา</button>
+          <button class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">สำหรับอาจารย์</button>
+        </div>
+      </div>
+
+      <a href="#" class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">ตารางเรียน</a>
+      <a href="#" class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">ตารางการใช้ห้อง</a>
+
+      <!-- Language Switcher -->
+      <div class="relative group">
+        <button class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">🌐ภาษา</button>
+        <div class="absolute hidden group-hover:block top-full mt-2 bg-white text-black border rounded-md shadow-md p-2 space-y-2">
+          <button onclick="switchLanguage('th')" class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">TH</button>
+          <button onclick="switchLanguage('en')" class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="hamburger" class="md:hidden bg-yellow-400 text-black p-2 rounded">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white text-black px-4 py-2 space-y-2">
+    <a href="#" class="block text-right">หน้าแรก</a>
+    <button onclick="toggleLoginMenu()" class="block w-full text-right">เข้าสู่ระบบ</button>
+    <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
+      <button class="block w-full text-right px-2 py-1 bg-green-100 rounded">นักศึกษา</button>
+      <button class="block w-full text-right px-2 py-1 bg-green-100 rounded">อาจารย์</button>
+    </div>
+    <a href="#" class="block text-right">ตารางเรียน</a>
+    <a href="#" class="block text-right">ตารางการใช้ห้อง</a>
+    <button onclick="toggleLangMenu()" class="block w-full text-right">🌐ภาษา</button>
+    <div id="lang-menu-mobile" class="hidden pl-4 space-y-1">
+      <button onclick="switchLanguage('th')" class="block w-full text-right px-2 py-1 bg-green-100 rounded">TH</button>
+      <button onclick="switchLanguage('en')" class="block w-full text-right px-2 py-1 bg-green-100 rounded">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="w-full mt-24">
+  <div class="w-full px-0">
+    <section class="bg-green-600 border border rounded-lg px-2 text-center py-8 mx-auto">
+      <h2 class="text-lg md:text-3xl lg:text-4xl font-extrabold text-black leading-tight">
+        ยินดีต้อนรับเข้าสู่ระบบบริการการศึกษา<br>มหาวิทยาลัยแม่โจ้
+      </h2>
+    </section>
+
+    <section class="overflow-hidden bg-yellow-100 shadow rounded">
+      <div class="w-full whitespace-nowrap slide-left flex space-x-10 px-4 py-3 text-green-800 text-xl">
+        <span>📌 เปิดระบบเพิ่ม-ถอน รายวิชา ตั้งแต่ 25-31 มิถุนายน 2568</span>
+        <span>📢 แจ้งปิดปรับปรุงระบบช่วง 20-21 กรกฎาคม 2568 </span>
+        <span>🎓 พิธีไหว้ครูประจำปีการศึกษา 2568 วันพฤหัสบดีที่ 31 กรกฎาคม 2568 </span>
+      </div>
+    </section>
+ 
+    <section class="bg-white p-6 rounded shadow-lg mb-6 w-full">
+      <h3 class="text-2xl font-semibold mb-4">ประกาศ</h3>
+      <p>ประกาศล่าสุดเกี่ยวกับการเรียนการสอน...</p>
+    </section>
+
+    <section class="bg-white p-6 rounded shadow-lg w-full">
+      <h3 class="text-2xl font-semibold mb-4">ข่าวเพิ่มเติม</h3>
+      <p>ข่าวกิจกรรมเพิ่มเติมของมหาวิทยาลัย...</p>
+    </section>
+  </div>
+</main>
+
+<!-- JavaScript -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  function toggleLoginMenu() {
+    const menu = document.getElementById('login-menu-mobile');
+    menu.classList.toggle('hidden');
+  }
+
+  function toggleLangMenu() {
+    const menu = document.getElementById('lang-menu-mobile');
+    menu.classList.toggle('hidden');
+  }
+
+  function switchLanguage(lang) {
+    if (lang === 'en') {
+      alert("Switched to English (demo only)");
+    } else {
+      alert("เปลี่ยนเป็นภาษาไทยแล้ว (เดโม)");
+    }
+    // เพิ่มระบบโหลดภาษาในอนาคตได้
+  }
+</script>
+
+<!-- CSS -->
+ <style>
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .slide-left {
+    animation: slideLeft 15s linear infinite;
+  }
+</style>
+
+
+
+</body>
+</html>
