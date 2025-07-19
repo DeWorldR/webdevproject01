@@ -6,11 +6,31 @@
   <title>ตารางเรียน - มหาวิทยาลัยแม่โจ้</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="ตารางเรียนและตารางสอบของนิสิต มหาวิทยาลัยแม่โจ้">
 </head>
+
+<!-- แถบข้าง -->
+<style>
+  ::-webkit-scrollbar {
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+</style>
+
 <body class="bg-gray-100 text-black font-sans">
 
   <!-- Navbar -->
-  <header class="bg-black shadow-md">
+  <header class="bg-black shadow-md sticky top-0 z-50">
     <div class="w-full mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold text-green-500">มหาวิทยาลัยแม่โจ้</h1>
       <nav class="hidden md:flex space-x-6">
@@ -47,10 +67,12 @@
       <p><strong>หลักสูตร:</strong> วิทยาศาสตรบัณฑิต สาขาวิทยาการคอมพิวเตอร์</p>
       <p><strong>ปีการศึกษา:</strong> 2568</p>
     </div>
-
+    
     <!-- ตารางเรียน -->
-    <div class="container mx-auto my-5 px-4">
+    <div class="overflow-x-auto">
       <table class="w-full border-2 border-gray-300 text-center">
+       <!-- <div class="overflow-x-auto"> เอาไว้แก้ให้ดูใหญ่-->
+        <!-- <table class="min-w-[1000px] border-2 border-gray-300 text-center"> เอาไว้แก้ให้ดูใหญ่-->
         <thead class="bg-gray-700 text-white">
           <tr class="border px-10">
             <th class="border px-1 py-1">วัน/เวลา</th>
@@ -66,16 +88,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="width: 90% margin: 20px auto border-2 border-gray-300">
-            <td class="font-bold bg-gray-100 border-2 border-gray-300">จันทร์</td>
+          <tr>
+            <td class="font-bold bg-green-100 border-2 border-gray-300">จันทร์</td>
             <td class="border-2 border-gray-300"></td>
             <td colspan="3" class="bg-blue-200 border-2 border-gray-300">10301231<br>Lab คอม3-4</td>
             <td class="border-2 border-gray-300"></td>
             <td colspan="2" class="bg-blue-200 border-2 border-gray-300">10301222<br>Lab คอม3-4</td>
             <td colspan="2" class="bg-blue-200 border-2 border-gray-300">10700313<br>ศร306</td>
           </tr>
-          <tr class="width: 90% margin: 20px auto border-2 border-gray-300">
-            <td class="font-bold bg-gray-100 border-2 border-gray-300">อังคาร</td>
+          <tr>
+            <td class="font-bold bg-green-100 border-2 border-gray-300">อังคาร</td>
             <td colspan="2" class="bg-blue-200 border-2 border-gray-300">10301231<br>Lab คอม3-4</td>
             <td class="border-2 border-gray-300"></td>
             <td class="border-2 border-gray-300"></td>
@@ -84,22 +106,22 @@
             <td class="bg-blue-200 border-2 border-gray-300">10301211<br>3203</td>
             <td class="border-2 border-gray-300"></td>
           </tr>
-          <tr class="width: 90% margin: 20px auto border-2 border-gray-300">
-            <td class="font-bold bg-gray-100 border-2 border-gray-300">พุธ</td>
+          <tr>
+            <td class="font-bold bg-green-100 border-2 border-gray-300">พุธ</td>
             <td class="border-2 border-gray-300"></td>
             <td colspan="3" class="bg-blue-200 border-2 border-gray-300">10301225<br>Lab คอม3-4</td>
             <td colspan="5"></td>
           </tr>
-          <tr class="border px-2 py-1">
-            <td class="font-bold bg-gray-100 border-2 border-gray-300">พฤหัสบดี</td>
+          <tr>
+            <td class="font-bold bg-green-100 border-2 border-gray-300">พฤหัสบดี</td>
             <td class="border-2 border-gray-300"></td>
             <td colspan="3" class="bg-blue-200 border-2 border-gray-300">10301222<br>Lab คอม3-4</td>
             <td class="border-2 border-gray-300"></td>
             <td colspan="2" class="bg-blue-200 border-2 border-gray-300">10301223<br>Lab คอม3-4</td>
             <td colspan="2" class="bg-blue-200 border-2 border-gray-300">10700313<br>ศร306</td>
           </tr>
-          <tr class="border px-2 py-1">
-            <td class="font-bold bg-gray-100 border-2 border-gray-300">ศุกร์</td>
+          <tr>
+            <td class="font-bold bg-green-100 border-2 border-gray-300">ศุกร์</td>
             <td class="border-2 border-gray-300"></td>
             <td class="bg-blue-200 border-2 border-gray-300">10301211<br>3203</td>
             <td class="border-2 border-gray-300"></td>
@@ -118,56 +140,56 @@
     <!-- ตารางสอบ -->
     <h2 class="text-xl font-semibold mt-8 mb-2">ตารางสอบ</h2>
     <p class="text-sm mb-2 text-gray-700">* ข้อมูลที่ปรากฏในตารางเรียนประกอบด้วย รหัสวิชา (จำนวนหน่วยกิต) กลุ่มเรียน, ห้องเรียน และอาคาร</p>
-
     <div class="overflow-x-auto">
       <table class="w-full border border-gray-300 text-sm text-center">
         <thead class="bg-gray-800 text-white">
           <tr>
-            <th class="p-2">รหัสวิชา</th>
+            <th class="px-4 py-2">รหัสวิชา</th>
             <th>ชื่อวิชา</th>
             <th>กลุ่ม</th>
             <th>สอบกลางภาค</th>
             <th>สอบปลายภาค</th>
           </tr>
         </thead>
-        <tbody class="bg-white text-black">
-          <tr>
+        
+        <tbody class="bg-white text-black divide-y divide-gray-200">
+          <tr class="even:bg-gray-50">
             <td>10301211</td>
             <td>คณิตศาสตร์สำหรับวิทยาการคอมพิวเตอร์<br><i>Mathematics for Computer Science</i></td>
             <td>1</td>
             <td>22 ส.ค. 2568<br>08:00-11:00</td>
             <td>-</td>
           </tr>
-          <tr>
+          <tr class="even:bg-gray-50">
             <td>10301222</td>
             <td>โครงสร้างข้อมูลและอัลกอริทึม<br><i>Data Structure and Algorithm</i></td>
             <td>1</td>
             <td>18 ส.ค. 2568<br>12:00-15:00</td>
             <td>-</td>
           </tr>
-          <tr>
+          <tr class="even:bg-gray-50">
             <td>10301223</td>
             <td>ฐานข้อมูลโครงสร้างเชิงสัมพันธ์<br><i>Structure Relational Database</i></td>
             <td>1</td>
             <td>20 ส.ค. 2568<br>15:00-18:30</td>
             <td>-</td>
           </tr>
-          <tr>
+          <tr class="even:bg-gray-50">
             <td>10301225</td>
             <td>วิศวกรรมซอฟต์แวร์<br><i>Software Engineering</i></td>
             <td>1</td>
             <td>-</td>
             <td>-</td>
           </tr>
-          <tr>
+          <tr class="even:bg-gray-50">
             <td>10301231</td>
             <td>เว็บเทคโนโลยี<br><i>Web Technology</i></td>
             <td>1</td>
             <td>-</td>
             <td>-</td>
           </tr>
-          <tr>
-            <td>10301313</td>
+          <tr class="even:bg-gray-50">
+            <td>10700313</td>
             <td>ภาษาอังกฤษเชิงวิทยาศาสตร์และนวัตกรรม<br><i>English for Science and Innovation</i></td>
             <td>1</td>
             <td>-</td>
@@ -177,7 +199,13 @@
       </table>
     </div>
   </div>
+   
+  <!-- ส่วนท้าย -->
+  <footer class="bg-black text-white text-center py-4 mt-10">
+  <p>&copy; 2568 มหาวิทยาลัยแม่โจ้. All rights reserved.</p>
+</footer>
 
+  
   <!-- เมนูมือถือ -->
   <script>
         const hamburger = document.getElementById('hamburger');
@@ -186,6 +214,7 @@
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+        
     </script>
 </body>
 </html>
