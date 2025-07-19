@@ -13,7 +13,7 @@
   <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-24 text-black">
 
     <!-- Logo + Title -->
-    <div class="flex items-center space-x-4">
+    <div class="flex items-center space-x-4 flex-1">
       <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png" alt="โลโก้มหาวิทยาลัย" class="w-24 h-auto">
       <h1 class="text-2xl font-bold text-white">MEAJO UNIVERSITY</h1>
     </div>
@@ -46,6 +46,7 @@
     <!-- Hamburger Button -->
     <button id="hamburger" class="md:hidden bg-yellow-400 text-black p-2 rounded">☰</button>
   </div>
+  
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white text-black px-4 py-2 space-y-2">
@@ -83,17 +84,19 @@
       </div>
     </section>
  
-    <section class="bg-white p-6 rounded shadow-lg mb-6 w-full">
-      <h3 class="text-2xl font-semibold mb-4">ประกาศ</h3>
-      <p class="mb-4">ประกาศล่าสุดเกี่ยวกับการเรียนการสอน...</p>
-      <iframe src="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline" class="text-14 w-full h-96 border border-gray-300 rounded"></iframe>
-    </section>
+<section class="bg-white p-6 rounded shadow-lg w-full mb-6">
+  <h3 class="text-2xl font-semibold mb-4">📢 ประกาศ / ข่าวเพิ่มเติม</h3>
+  <div class="overflow-x-auto whitespace-nowrap snap-x snap-mandatory flex gap-4">
+    <!-- รูปที่ 1 -->
+    <img src="https://via.placeholder.com/300x200" class="w-72 h-48 rounded-lg shadow-md snap-start" alt="img1">
+    <!-- รูปที่ 2 -->
+    <img src="https://via.placeholder.com/300x200" class="w-72 h-48 rounded-lg shadow-md snap-start" alt="img2">
+    <!-- รูปที่ 3 -->
+    <img src="https://via.placeholder.com/300x200" class="w-72 h-48 rounded-lg shadow-md snap-start" alt="img3">
+    <!-- เพิ่มกี่รูปก็ได้ -->
+  </div>
+</section>
 
-
-    <section class="bg-white p-6 rounded shadow-lg w-full">
-      <h3 class="text-2xl font-semibold mb-4">ข่าวเพิ่มเติม</h3>
-      <p>ข่าวกิจกรรมเพิ่มเติมของมหาวิทยาลัย...</p>
-    </section>
   </div>
 </main>
 
