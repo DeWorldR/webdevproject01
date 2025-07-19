@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>MAEJO UNIVERSITY</title>
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-100 text-gray-900">
+
+    <header class="bg-green-600 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">MAEJO UNIVERSITY</h1>
+
+
+            <nav class="hidden md:flex space-x-6 items-center text-lg">
+      <a href="#" class="border border-black  px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">หน้าแรก</a>
+
+      <div class="relative group">
+        <button class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">เข้าสู่ระบบ</button>
+        <div class="absolute hidden group-hover:block top-full mt-2 bg-white text-black border rounded-md shadow-md p-2 space-y-2">
+          <button class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">สำหรับนักศึกษา</button>
+          <button class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">สำหรับอาจารย์</button>
+        </div>
+      </div>
+
+      <a href="#" class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">ตารางเรียน</a>
+      <a href="#" class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">ตารางการใช้ห้อง</a>
+
+      <!-- Language Switcher -->
+      <div class="relative group">
+        <button class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">🌐ภาษา</button>
+        <div class="absolute hidden group-hover:block top-full mt-2 bg-white text-black border rounded-md shadow-md p-2 space-y-2">
+          <button onclick="switchLanguage('th')" class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">TH</button>
+          <button onclick="switchLanguage('en')" class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="hamburger" class="md:hidden bg-yellow-400 text-black p-2 rounded">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white text-black px-4 py-2 space-y-2">
+    <a href="#" class="block text-right">หน้าแรก</a>
+    <button onclick="toggleLoginMenu()" class="block w-full text-right">เข้าสู่ระบบ</button>
+    <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
+      <button class="block w-full text-right px-2 py-1 bg-green-100 rounded">นักศึกษา</button>
+      <button class="block w-full text-right px-2 py-1 bg-green-100 rounded">อาจารย์</button>
+    </div>
+    <a href="#" class="block text-right">ตารางเรียน</a>
+    <a href="#" class="block text-right">ตารางการใช้ห้อง</a>
+    <button onclick="toggleLangMenu()" class="block w-full text-right">🌐ภาษา</button>
+    <div id="lang-menu-mobile" class="hidden pl-4 space-y-1">
+      <button onclick="switchLanguage('th')" class="block w-full text-right px-2 py-1 bg-green-100 rounded">TH</button>
+      <button onclick="switchLanguage('en')" class="block w-full text-right px-2 py-1 bg-green-100 rounded">EN</button>
+    </div>
+  </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="text-center py-20 bg-green-500 text-black">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">คณะวิทยาศาสตร์</h2>
+            <p class="text-lg md:text-xl">อาคารจุฬาภรณ์ COM3203</p>
+        </section>
+
+        <div class="container mx-auto my-5 px-4 overflow-x-auto">
+    <table class="w-full border-2 border-black text-center">
+        <thead class="text-black">
+            <tr>
+                <th class="border border-black px-2 py-1">วัน/เวลา</th>
+                <th class="border border-black px-2 py-1">8:00-9:00</th>
+                <th class="border border-black px-2 py-1">9:00-10:00</th>
+                <th class="border border-black px-2 py-1">10:00-11:00</th>
+                <th class="border border-black px-2 py-1">11:00-12:00</th>
+                <th class="border border-black px-2 py-1">12:00-13:00</th>
+                <th class="border border-black px-2 py-1">13:00-14:00</th>
+                <th class="border border-black px-2 py-1">14:00-15:00</th>
+                <th class="border border-black px-2 py-1">15:00-16:00</th>
+                <th class="border border-black px-2 py-1">16:00-17:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="font-bold border border-black">จันทร์</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="font-bold border border-black">อังคาร</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="bg-blue-200 border border-black" colspan="3">
+                    10301112<br>เทคโนฯสื่อสาร<br>ผศ.ดร.ปวีณ
+                </td>
+                <td class="bg-blue-200 border border-black">10301211<br>คณิตคอมฯ<br>อ.ดร.พยุงศักดิ์</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="font-bold border border-black">พุธ</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td colspan="3" class="bg-blue-200 border border-black">
+                    10301225<br>วิศวกรรมซอฟต์แวร์<br>อ.อลงกต+ผศ.ดร.สมนึก
+                </td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+                <td class="border border-black h-[50px]">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="font-bold border border-black">พฤหัส</td>
+                <td colspan="3" class="bg-blue-200 border border-black">
+                    10301111<br>โปรแกรมเบื้องต้น<br>ผศ.ภานุวัฒน์
+                </td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+          </tr>
+          <tr>
+                 <td class="font-bold bg-gray-100 border border-black">ศุกร์</td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+                 <td class="border border-black h-[50px]"></td>
+          </tr>
+        </tbody>
+
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function () {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+
+</html>
