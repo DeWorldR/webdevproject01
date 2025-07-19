@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>ตารางการใช้ห้อง - มหาวิทยาลัยแม่โจ้</title>
+</head>
+
+<body class="min-h-screen flex flex-col text-white bg-gray-900">
+    <header class="bg-green-800 shadow-md">
+        <div class="w-full max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-white">
+                <i class="mr-2"></i>MAEJO UNIVERSITY
+            </h1>
+
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-green-300 transition">
+                    <i class="fa-solid fa-house mr-1"></i>หน้าแรก</a>
+                <a href="login_professor.html" class="hover:text-green-300 transition">
+                    <i class="fa-solid fa-right-from-bracket mr-1"></i>ออกจากระบบ</a>
+            </nav>
+
+            <button id="hamburger" class="md:hidden focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl text-white"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-2 text-right">
+            <a href="#" class="hover:text-green-300 transition"><i class="fa-solid fa-house mr-1"></i>หน้าแรก</a>
+            <a href="login_professor.html" class="hover:text-green-300 transition"><i
+                    class="fa-solid fa-right-from-bracket mr-1"></i>ออกจากระบบ</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="text-center py-14 bg-gray-900">
+            <div class="max-w-2xl mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-green-500 mb-4">ตารางการใช้ห้อง</h2>
+                <p class="text-gray-400">ค้นหาและตรวจสอบการใช้งานห้องของอาคารต่างๆ ได้ที่นี่</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 px-4">
+                <div class="relative w-full max-w-md">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" placeholder="ค้นหาด้วยชื่ออาคาร หรือรหัส"
+                        class="w-full pl-10 pr-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-700" />
+                </div>
+
+                <button class="bg-green-600 text-white py-2 px-5 rounded-lg hover:bg-green-700 transition duration-300">
+                    ค้นหา
+                </button>
+            </div>
+        </section>
+
+        <section class="bg-gray-900 text-white py-12 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-green-500 mb-8 text-center">เลือกอาคาร</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 p-5 rounded-xl hover:bg-green-800 transition shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            <i class="fa-solid fa-bullhorn mr-2 text-green-400"></i>000 ประกาศภายหลัง
+                        </h3>
+                        <p class="text-sm text-gray-400">ข้อมูลเพิ่มเติม</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-5 rounded-xl hover:bg-green-800 transition shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            <i class="fa-solid fa-building-columns mr-2 text-green-400"></i>101 อาคารพัฒนาวิศัยทัศน์
+                        </h3>
+                        <p class="text-sm text-gray-400">ห้องเรียนรวมของคณะต่างๆ</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-5 rounded-xl hover:bg-green-800 transition shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            <i class="fa-solid fa-user-tie mr-2 text-green-400"></i>102 ประเสริฐ ณ นคร
+                        </h3>
+                        <p class="text-sm text-gray-400">สำนักงานและห้องปฏิบัติการวิจัย</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-5 rounded-xl hover:bg-green-800 transition shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            <i class="fa-solid fa-school mr-2 text-green-400"></i>103 สมิตตานนท์
+                        </h3>
+                        <p class="text-sm text-gray-400">ภาควิชาศึกษาทั่วไป</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-5 rounded-xl hover:bg-green-800 transition shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            <i class="fa-solid fa-gears mr-2 text-green-400"></i>104 วิศวกรรมและอุตสาหกรรมเกษตร
+                        </h3>
+                        <p class="text-sm text-gray-400">คณะวิศวกรรมศาสตร์</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-5 rounded-xl hover:bg-green-800 transition shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">
+                            <i class="fa-solid fa-flask mr-2 text-green-400"></i>105 คณะวิทยาศาสตร์
+                        </h3>
+                        <p class="text-sm text-gray-400">ใช้สำหรับเรียนวิทยาศาสตร์ทั่วไป</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-green-800 text-center py-4">
+        <p class="text-sm text-white">© 2025 Maejo University. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
