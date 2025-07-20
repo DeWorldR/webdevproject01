@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+<<<<<<< HEAD
 
 <head>
   <meta charset="UTF-8" />
@@ -29,9 +30,77 @@
 
       <!-- Desktop Menu -->
       <nav class="hidden md:flex space-x-4 items-center text-sm md:text-base">
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>REG_MJU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen">
+    <header class="bg-green-800 shadow-md fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+        <div class="flex items-center space-x-4">
+          <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png" alt="โลโก้มหาวิทยาลัย" class="w-14 h-auto" />
+          <h1 class="text-xl md:text-2xl font-bold text-white">MAEJO UNIVERSITY</h1>
+        </div>
+
+        <nav class="hidden md:flex space-x-4 items-center text-sm md:text-base">
+>>>>>>> c25a5a5 (REPO)
           <a href="index.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
             <i class="fa-solid fa-house"></i> หน้าแรก
           </a>
+
+<<<<<<< HEAD
+          <a href="table.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-calendar-days"></i> ตารางเรียน
+          </a>
+
+          <a href="room_table.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-chalkboard-user"></i> ตารางการใช้ห้อง
+          </a>
+
+          <a href="ex.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-book"></i> ปฏิทินการศึกษา
+          </a>
+
+          <div class="relative">
+            <a href="#" id="lang-btn-desktop" onclick="toggleLangMenuDesktop()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+              <i class="fa-solid fa-language"></i> ภาษา
+            </a>
+            <div id="lang-menu-desktop" class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+              <button onclick="switchLanguage('th')" class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">TH</button>
+              <button onclick="switchLanguage('en')" class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">EN</button>
+            </div>
+          </div>
+=======
+>>>>>>> c25a5a5 (REPO)
+          <div class="relative">
+            <a href="#" id="login-btn-desktop" onclick="toggleLoginMenuDesktop()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+              <i class="fa-solid fa-right-to-bracket"></i> เข้าสู่ระบบ
+            </a>
+            <div id="login-menu-desktop" class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+              <a href="login_student.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">นักศึกษา</a>
+              <a href="login_professor.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">อาจารย์</a>
+            </div>
+          </div>
+<<<<<<< HEAD
+        </nav>
+
+      <!-- Hamburger Button -->
+      <button id="hamburger" class="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 p-1 bg-green-600 rounded">
+          <span class="bg-white w-6 h-0.5"></span>
+          <span class="bg-white w-6 h-0.5"></span>
+          <span class="bg-white w-6 h-0.5"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-green-800 text-white px-4 py-2 space-y-2">
+        <a href="index.html" class="block text-right"><i class="fa-solid fa-house mr-2"></i>หน้าแรก</a>
+=======
 
           <a href="table.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
             <i class="fa-solid fa-calendar-days"></i> ตารางเรียน
@@ -54,28 +123,23 @@
               <button onclick="switchLanguage('en')" class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">EN</button>
             </div>
           </div>
-          <div class="relative">
-            <a href="#" id="login-btn-desktop" onclick="toggleLoginMenuDesktop()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
-              <i class="fa-solid fa-right-to-bracket"></i> เข้าสู่ระบบ
-            </a>
-            <div id="login-menu-desktop" class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
-              <a href="login_student.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">นักศึกษา</a>
-              <a href="login_professor.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">อาจารย์</a>
-            </div>
-          </div>
         </nav>
 
-      <!-- Hamburger Button -->
-      <button id="hamburger" class="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 p-1 bg-green-600 rounded">
-          <span class="bg-white w-6 h-0.5"></span>
-          <span class="bg-white w-6 h-0.5"></span>
-          <span class="bg-white w-6 h-0.5"></span>
-      </button>
-    </div>
+        <button id="hamburger" class="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 p-1 bg-green-600 rounded">
+          <span class="block w-6 h-0.5"></span>
+          <span class="block w-6 h-0.5"></span>
+          <span class="block w-6 h-0.5"></span>
+        </button>
+      </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-green-800 text-white px-4 py-2 space-y-2">
+      <div id="mobile-menu" class="hidden md:hidden bg-green-800 text-white px-4 py-2 space-y-2">
         <a href="index.html" class="block text-right"><i class="fa-solid fa-house mr-2"></i>หน้าแรก</a>
+        <a href="#" onclick="toggleLoginMenu()" class="block text-right"><i class="fa-solid fa-right-to-bracket mr-2"></i>เข้าสู่ระบบ</a>
+        <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
+          <a href="login_student.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">นักศึกษา</a>
+          <a href="login_professor.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">อาจารย์</a>
+        </div>
+>>>>>>> c25a5a5 (REPO)
         <a href="table.html" class="block text-right"><i class="fa-solid fa-calendar-days mr-2"></i>ตารางเรียน</a>
         <a href="room_table.html" class="block text-right"><i class="fa-solid fa-chalkboard-user mr-2"></i>ตารางการใช้ห้อง</a>
         <a href="ex.html" class="block text-right"><i class="fa-solid fa-chalkboard-user mr-2"></i> ปฏิทินการศึกษา</a>
@@ -84,6 +148,7 @@
           <button onclick="switchLanguage('th')" class="block w-full text-right px-2 py-1 bg-green-700 rounded">TH</button>
           <button onclick="switchLanguage('en')" class="block w-full text-right px-2 py-1 bg-green-700 rounded">EN</button>
         </div>
+<<<<<<< HEAD
         <a href="#" onclick="toggleLoginMenu()" class="block text-right"><i class="fa-solid fa-right-to-bracket mr-2"></i>เข้าสู่ระบบ</a>
         <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
           <a href="login_student.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">นักศึกษา</a>
@@ -92,6 +157,10 @@
     </div>
     
   </header>
+=======
+      </div>
+    </header>
+>>>>>>> c25a5a5 (REPO)
 
   <!-- Main Content -->
   <main class="flex-grow w-full pt-28 px-4">
@@ -120,7 +189,7 @@
         <div class="overflow-x-auto">
           <div class="inline-block min-w-full">
             <table class="min-w-full text-xs sm:text-sm border border-gray-300 text-center">
-              <thead class="bg-gray-700 text-white">
+              <thead class="bg-gray-500 text-white">
                 <tr class="border px-10">
                   <th class="border px-1 py-1">วัน/เวลา</th>
                   <th class="border px-1 py-1">8:00-9:00</th>
@@ -136,7 +205,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="font-bold bg-gray-700 border-2 border-gray-300">จันทร์</td>
+                  <td class="font-bold bg-gray-400 border-2 border-gray-300">จันทร์</td>
                   <td class="border-2 border-gray-300"></td>
                   <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">10301231<br>Lab คอม3-4</td>
                   <td class="border-2 border-gray-300"></td>
@@ -144,7 +213,7 @@
                   <td colspan="2" class="bg-blue-300 border border-gray-300 text-black">10700313<br>ศร306</td>
                 </tr>
                 <tr>
-                  <td class="font-bold bg-gray-700 border-2 border-gray-300">อังคาร</td>
+                  <td class="font-bold bg-gray-400 border-2 border-gray-300">อังคาร</td>
                   <td colspan="2" class="bg-blue-300 border border-gray-300 text-black">10301231<br>Lab คอม3-4</td>
                   <td class="border-2 border-gray-300"></td>
                   <td class="border-2 border-gray-300"></td>
@@ -154,13 +223,17 @@
                   <td class="border-2 border-gray-300"></td>
                 </tr>
                 <tr>
-                  <td class="font-bold bg-gray-700 border-2 border-gray-300">พุธ</td>
+                  <td class="font-bold bg-gray-400 border-2 border-gray-300">พุธ</td>
                   <td class="border-2 border-gray-300"></td>
                   <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">10301225<br>Lab คอม3-4</td>
-                  <td colspan="5"></td>
+                  <td class="border-2 border-gray-300"></td>
+                  <td class="border-2 border-gray-300"></td>
+                  <td class="border-2 border-gray-300"></td>
+                  <td class="border-2 border-gray-300"></td>
+                  <td class="border-2 border-gray-300"></td>
                 </tr>
                 <tr>
-                  <td class="font-bold bg-gray-700 border-2 border-gray-300">พฤหัสบดี</td>
+                  <td class="font-bold bg-gray-400 border-2 border-gray-300">พฤหัสบดี</td>
                   <td class="border-2 border-gray-300"></td>
                   <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">10301222<br>Lab คอม3-4</td>
                   <td class="border-2 border-gray-300"></td>
@@ -168,7 +241,7 @@
                   <td colspan="2" class="bg-blue-300 border border-gray-300 text-black">10700313<br>ศร306</td>
                 </tr>
                 <tr>
-                  <td class="font-bold bg-gray-700 border-2 border-gray-300">ศุกร์</td>
+                  <td class="font-bold bg-gray-400 border-2 border-gray-300">ศุกร์</td>
                   <td class="border-2 border-gray-300"></td>
                   <td class="bg-blue-300 border border-gray-300 text-black">10301211<br>3203</td>
                   <td class="border-2 border-gray-300"></td>
@@ -190,8 +263,8 @@
         <p class="text-sm mb-2 text-white">* ข้อมูลที่ปรากฏในตารางเรียนประกอบด้วย รหัสวิชา (จำนวนหน่วยกิต) กลุ่มเรียน,
           ห้องเรียน และอาคาร</p>
         <div class="overflow-x-auto">
-          <table class="w-full border border-gray-300 text-sm text-center">
-            <thead class="bg-gray-800 text-white">
+          <table class="w-full border border-gray-50 text-sm text-center">
+            <thead class="bg-gray-500 text-white">
               <tr>
                 <th class="px-4 py-2">รหัสวิชา</th>
                 <th>ชื่อวิชา</th>
