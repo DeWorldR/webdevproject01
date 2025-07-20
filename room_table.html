@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,83 +9,100 @@
 
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-dVf3nBtXtCzROlJo1FeTj2Mj8bG+PtqJ/jEf0xOtn7Q4dPjq3+tkQiQZAGFpgNh5axHZ0yoYM+rVbZbZmGl+0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-dVf3nBtXtCzROlJo1FeTj2Mj8bG+PtqJ/jEf0xOtn7Q4dPjq3+tkQiQZAGFpgNh5axHZ0yoYM+rVbZbZmGl+0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="bg-gray-900 text-white min-h-screen">
 
   <!-- Navbar -->
   <header class="bg-green-800 shadow-md fixed w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
-
-      <!-- Logo + Title -->
-      <div class="flex items-center space-x-4">
-        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png" alt="โลโก้มหาวิทยาลัย" class="w-14 h-auto">
+    <div class="w-full px-0 md:px-4 flex justify-between items-center h-20">
+      <div class="flex items-center space-x-4 pl-2">
+        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png"
+          alt="โลโก้มหาวิทยาลัย" class="w-14 h-auto" />
         <h1 class="text-xl md:text-2xl font-bold text-white">MAEJO UNIVERSITY</h1>
       </div>
 
-      <!-- Desktop Menu -->
       <nav class="hidden md:flex space-x-4 items-center text-sm md:text-base">
-          <a href="index.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
-            <i class="fa-solid fa-house"></i> หน้าแรก
-          </a>
+        <a href="index.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-house"></i> หน้าแรก
+        </a>
+        <a href="table.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-calendar-days"></i> ตารางเรียน
+        </a>
+        <a href="main_table.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-chalkboard-user"></i> ตารางการใช้ห้อง
+        </a>
+        <a href="ex.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-book"></i> ปฏิทินการศึกษา
+        </a>
 
-          <a href="table.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
-            <i class="fa-solid fa-calendar-days"></i> ตารางเรียน
+        <!-- Language Menu -->
+        <div class="relative">
+          <a href="#" id="lang-btn-desktop" onclick="toggleLangMenuDesktop()"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-language"></i> ภาษา
           </a>
-
-          <a href="room_table.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
-            <i class="fa-solid fa-chalkboard-user"></i> ตารางการใช้ห้อง
-          </a>
-
-          <a href="ex.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
-            <i class="fa-solid fa-book"></i> ปฏิทินการศึกษา
-          </a>
-
-          <div class="relative">
-            <a href="#" id="lang-btn-desktop" onclick="toggleLangMenuDesktop()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
-              <i class="fa-solid fa-language"></i> ภาษา
-            </a>
-            <div id="lang-menu-desktop" class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
-              <button onclick="switchLanguage('th')" class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">TH</button>
-              <button onclick="switchLanguage('en')" class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">EN</button>
-            </div>
+          <div id="lang-menu-desktop"
+            class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+            <button onclick="switchLanguage('th')"
+              class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">TH</button>
+            <button onclick="switchLanguage('en')"
+              class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">EN</button>
           </div>
-          <div class="relative">
-            <a href="#" id="login-btn-desktop" onclick="toggleLoginMenuDesktop()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
-              <i class="fa-solid fa-right-to-bracket"></i> เข้าสู่ระบบ
-            </a>
-            <div id="login-menu-desktop" class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
-              <a href="login_student.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">นักศึกษา</a>
-              <a href="login_professor.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">อาจารย์</a>
-            </div>
-          </div>
-        </nav>
-        
+        </div>
 
-      <!-- Hamburger Button -->
-      <button id="hamburger" class="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 p-1 bg-green-600 rounded">
-          <span class="bg-white w-6 h-0.5"></span>
-          <span class="bg-white w-6 h-0.5"></span>
-          <span class="bg-white w-6 h-0.5"></span>
+        <!-- Login Menu -->
+        <div class="relative">
+          <a href="#" id="login-btn-desktop" onclick="toggleLoginMenuDesktop()"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-right-to-bracket"></i> เข้าสู่ระบบ
+          </a>
+          <div id="login-menu-desktop"
+            class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+            <a href="login_student.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">นักศึกษา</a>
+            <a href="login_professor.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">อาจารย์</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hamburger -->
+      <button id="hamburger"
+        class="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 p-1 bg-green-600 rounded mr-2">
+        <span class="bg-white w-6 h-0.5"></span>
+        <span class="bg-white w-6 h-0.5"></span>
+        <span class="bg-white w-6 h-0.5"></span>
       </button>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-green-800 text-white px-4 py-2 space-y-2">
-        <a href="index.html" class="block text-right"><i class="fa-solid fa-house mr-2"></i>หน้าแรก</a>
-        <a href="table.html" class="block text-right"><i class="fa-solid fa-calendar-days mr-2"></i>ตารางเรียน</a>
-        <a href="room_table.html" class="block text-right"><i class="fa-solid fa-chalkboard-user mr-2"></i>ตารางการใช้ห้อง</a>
-        <a href="ex.html" class="block text-right"><i class="fa-solid fa-chalkboard-user mr-2"></i> ปฏิทินการศึกษา</a>
-        <a href="#" onclick="toggleLangMenu()" class="block text-right"><i class="fa-solid fa-language mr-2"></i>ภาษา</a>
-        <div id="lang-menu-mobile" class="hidden pl-4 space-y-1">
-          <button onclick="switchLanguage('th')" class="block w-full text-right px-2 py-1 bg-green-700 rounded">TH</button>
-          <button onclick="switchLanguage('en')" class="block w-full text-right px-2 py-1 bg-green-700 rounded">EN</button>
-        </div>
-        <a href="#" onclick="toggleLoginMenu()" class="block text-right"><i class="fa-solid fa-right-to-bracket mr-2"></i>เข้าสู่ระบบ</a>
-        <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
-          <a href="login_student.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">นักศึกษา</a>
-          <a href="login_professor.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">อาจารย์</a>
-        </div>
+      <a href="index.html" class="block text-right"><i class="fa-solid fa-house mr-2"></i>หน้าแรก</a>
+      <a href="table.html" class="block text-right"><i class="fa-solid fa-calendar-days mr-2"></i>ตารางเรียน</a>
+      <a href="main_table.html" class="block text-right"><i
+          class="fa-solid fa-chalkboard-user mr-2"></i>ตารางการใช้ห้อง</a>
+      <a href="ex.html" class="block text-right"><i class="fa-solid fa-book mr-2"></i> ปฏิทินการศึกษา</a>
+
+      <a href="#" onclick="toggleLangMenu()" class="block text-right"><i class="fa-solid fa-language mr-2"></i>ภาษา</a>
+      <div id="lang-menu-mobile" class="hidden pl-4 space-y-1">
+        <button onclick="switchLanguage('th')"
+          class="block w-full text-right px-2 py-1 bg-green-700 rounded">TH</button>
+        <button onclick="switchLanguage('en')"
+          class="block w-full text-right px-2 py-1 bg-green-700 rounded">EN</button>
+      </div>
+
+      <a href="#" onclick="toggleLoginMenu()" class="block text-right"><i
+          class="fa-solid fa-right-to-bracket mr-2"></i>เข้าสู่ระบบ</a>
+      <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
+        <a href="login_student.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">นักศึกษา</a>
+        <a href="login_professor.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">อาจารย์</a>
+      </div>
     </div>
   </header>
 
@@ -93,7 +111,7 @@
     <div class="w-full">
 
 
-  <!-- Welcome Section -->
+      <!-- Welcome Section -->
       <section class="bg-gray-800 border border-gray-700 rounded-lg px-2 text-center py-8 mx-auto mb-6">
         <h2 class="text-lg md:text-3xl lg:text-4xl font-extrabold text-green-500 leading-tight">
           ยินดีต้อนรับเข้าสู่ระบบบริการการศึกษา<br>มหาวิทยาลัยแม่โจ้
@@ -102,161 +120,161 @@
       </section>
 
 
-       <!-- ตารางใช้ห้อง3203 -->
-    <div class="overflow-x-auto">
-      <div class="inline-block min-w-full">
-      <table class="min-w-full text-xs sm:text-sm border border-gray-300 text-center">
-       <!-- <div class="overflow-x-auto"> เอาไว้แก้ให้ดูใหญ่-->
-        <!-- <table class="min-w-[1000px] border-2 border-gray-300 text-center"> เอาไว้แก้ให้ดูใหญ่-->
-        <thead class="bg-gray-700 text-white">
-          <tr class="border-2 px-10">
-            <th class="border-2 px-1 py-1">วัน/เวลา</th>
-            <th class="border-2 px-1 py-1">8:00-9:00</th>
-            <th class="border-2 px-1 py-1">9:00-10:00</th>
-            <th class="border-2 px-1 py-1">10:00-11:00</th>
-            <th class="border-2 px-1 py-1">11:00-12:00</th>
-            <th class="border-2 px-1 py-1">12:00-13:00</th>
-            <th class="border-2 px-1 py-1">13:00-14:00</th>
-            <th class="border-2 px-1 py-1">14:00-15:00</th>
-            <th class="border-2 px-1 py-1">15:00-16:00</th>
-            <th class="border-2 px-1 py-1">16:00-17:00</th>
-          </tr>
-  </thead>
+      <!-- ตารางใช้ห้อง3203 -->
+      <div class="overflow-x-auto">
+        <div class="inline-block min-w-full">
+          <table class="min-w-full text-xs sm:text-sm border border-gray-300 text-center">
+            <!-- <div class="overflow-x-auto"> เอาไว้แก้ให้ดูใหญ่-->
+            <!-- <table class="min-w-[1000px] border-2 border-gray-300 text-center"> เอาไว้แก้ให้ดูใหญ่-->
+            <thead class="bg-gray-700 text-white">
+              <tr class="border-2 px-10">
+                <th class="border-2 px-1 py-1">วัน/เวลา</th>
+                <th class="border-2 px-1 py-1">8:00-9:00</th>
+                <th class="border-2 px-1 py-1">9:00-10:00</th>
+                <th class="border-2 px-1 py-1">10:00-11:00</th>
+                <th class="border-2 px-1 py-1">11:00-12:00</th>
+                <th class="border-2 px-1 py-1">12:00-13:00</th>
+                <th class="border-2 px-1 py-1">13:00-14:00</th>
+                <th class="border-2 px-1 py-1">14:00-15:00</th>
+                <th class="border-2 px-1 py-1">15:00-16:00</th>
+                <th class="border-2 px-1 py-1">16:00-17:00</th>
+              </tr>
+            </thead>
 
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-bold bg-gray-700 border-2 border-gray-300">จันทร์</td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300 h-[50px]">&nbsp;</td>
-                        <td colspan="9" class="border-2 border-gray-300 h-[50px]">&nbsp;</td>
-                        
-                    </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-bold bg-gray-700 border-2 border-gray-300">จันทร์</td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300 h-[50px]">&nbsp;</td>
+                <td colspan="9" class="border-2 border-gray-300 h-[50px]">&nbsp;</td>
 
-                    <tr>
-                        <td class="font-bold bg-gray-700 border-2 border-gray-300">อังคาร</td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">
-                            10301112<br>เทคโนฯสื่อสาร<br>ผศ.ดร.ปวีณ
-                        </td>
-                        <td class="bg-blue-300 border border-gray-300 text-black">
-                            10301211<br>คณิตคอมฯ<br>อ.ดร.พยุงศักดิ์
-                        </td>
-                        <td class="border-2 border-gray-300"></td>
-                        
-                    </tr>
-                    <tr>
-                        <td class="font-bold bg-gray-700 border-2 border-gray-300">พุธ</td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">
-                            10301225<br>วิศวกรรมซอฟต์แวร์<br>อ.อลงกต+ผศ.ดร.สมนึก
-                        </td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td colspan="5" class="border-2 border-gray-300 h-[50px]">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold bg-gray-700 border-2 border-gray-300">พฤหัสบดี</td>
-                        <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">
-                            10301111<br>โปรแกรมเบื้องต้น<br>ผศ.ภานุวัฒน์</td>
-                        <td class="border-2 border-gray-300"></td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td colspan="6" class="border-2 border-gray-300"></td>
-                    </tr>
-                    <tr>
-                       <td class="font-bold bg-gray-700 border-2 border-gray-300">ศุกร์</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td class="border-2 border-gray-300">&nbsp;</td>
-                        <td colspan="9" class="border-2border-gray-300 h-[50px]">&nbsp;</td>
-                    </tr>
+              </tr>
 
-                </tbody>
-            </table>
+              <tr>
+                <td class="font-bold bg-gray-700 border-2 border-gray-300">อังคาร</td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">
+                  10301112<br>เทคโนฯสื่อสาร<br>ผศ.ดร.ปวีณ
+                </td>
+                <td class="bg-blue-300 border border-gray-300 text-black">
+                  10301211<br>คณิตคอมฯ<br>อ.ดร.พยุงศักดิ์
+                </td>
+                <td class="border-2 border-gray-300"></td>
+
+              </tr>
+              <tr>
+                <td class="font-bold bg-gray-700 border-2 border-gray-300">พุธ</td>
+                <td class="border-2 border-gray-300"></td>
+                <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">
+                  10301225<br>วิศวกรรมซอฟต์แวร์<br>อ.อลงกต+ผศ.ดร.สมนึก
+                </td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300"></td>
+                <td colspan="5" class="border-2 border-gray-300 h-[50px]">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="font-bold bg-gray-700 border-2 border-gray-300">พฤหัสบดี</td>
+                <td colspan="3" class="bg-blue-300 border border-gray-300 text-black">
+                  10301111<br>โปรแกรมเบื้องต้น<br>ผศ.ภานุวัฒน์</td>
+                <td class="border-2 border-gray-300"></td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td colspan="6" class="border-2 border-gray-300"></td>
+              </tr>
+              <tr>
+                <td class="font-bold bg-gray-700 border-2 border-gray-300">ศุกร์</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td class="border-2 border-gray-300">&nbsp;</td>
+                <td colspan="9" class="border-2border-gray-300 h-[50px]">&nbsp;</td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
-    </main>
-
- <body class="min-h-screen flex flex-col bg-gray-100 text-gray-900">
-
-  <main class="flex-grow">
-    <!-- เนื้อหาหลักที่นี่ -->
-    <h1 class="text-center mt-10"></h1>
   </main>
 
-  <footer class="bg-green-800 text-center py-6 text-white">
-    <p>&copy; 2025 MAEJO UNIVERSITY. All rights reserved.</p>
-  </footer>
+  <body class="min-h-screen flex flex-col bg-gray-100 text-gray-900">
 
-</body>
+    <main class="flex-grow">
+      <!-- เนื้อหาหลักที่นี่ -->
+      <h1 class="text-center mt-10"></h1>
+    </main>
+
+    <footer class="bg-green-800 text-center py-6 text-white">
+      <p>&copy; 2025 MAEJO UNIVERSITY. All rights reserved.</p>
+    </footer>
+
+  </body>
 
   <!-- Scripts -->
   <script>
-      const hamburger = document.getElementById('hamburger');
-      const mobileMenu = document.getElementById('mobile-menu');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        hamburger.classList.toggle('open');
-      });
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      hamburger.classList.toggle('open');
+    });
 
-      function toggleLoginMenu() {
-        document.getElementById('login-menu-mobile').classList.toggle('hidden');
+    function toggleLoginMenu() {
+      document.getElementById('login-menu-mobile').classList.toggle('hidden');
+    }
+
+    function toggleLangMenu() {
+      document.getElementById('lang-menu-mobile').classList.toggle('hidden');
+    }
+
+    function toggleLoginMenuDesktop() {
+      document.getElementById('login-menu-desktop').classList.toggle('hidden');
+    }
+
+    function toggleLangMenuDesktop() {
+      document.getElementById('lang-menu-desktop').classList.toggle('hidden');
+    }
+
+    function switchLanguage(lang) {
+      if (lang === 'en') {
+        alert("Switched to English (demo only)");
+      } else {
+        alert("เปลี่ยนเป็นภาษาไทยแล้ว (เดโม)");
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      const loginBtn = document.getElementById('login-btn-desktop');
+      const loginMenu = document.getElementById('login-menu-desktop');
+      const langBtn = document.getElementById('lang-btn-desktop');
+      const langMenu = document.getElementById('lang-menu-desktop');
+
+      if (!loginBtn.contains(e.target) && !loginMenu.contains(e.target)) {
+        loginMenu.classList.add('hidden');
       }
 
-      function toggleLangMenu() {
-        document.getElementById('lang-menu-mobile').classList.toggle('hidden');
+      if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+        langMenu.classList.add('hidden');
       }
-
-      function toggleLoginMenuDesktop() {
-        document.getElementById('login-menu-desktop').classList.toggle('hidden');
-      }
-
-      function toggleLangMenuDesktop() {
-        document.getElementById('lang-menu-desktop').classList.toggle('hidden');
-      }
-
-      function switchLanguage(lang) {
-        if (lang === 'en') {
-          alert("Switched to English (demo only)");
-        } else {
-          alert("เปลี่ยนเป็นภาษาไทยแล้ว (เดโม)");
-        }
-      }
-
-      document.addEventListener('click', function (e) {
-        const loginBtn = document.getElementById('login-btn-desktop');
-        const loginMenu = document.getElementById('login-menu-desktop');
-        const langBtn = document.getElementById('lang-btn-desktop');
-        const langMenu = document.getElementById('lang-menu-desktop');
-
-        if (!loginBtn.contains(e.target) && !loginMenu.contains(e.target)) {
-          loginMenu.classList.add('hidden');
-        }
-
-        if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
-          langMenu.classList.add('hidden');
-        }
-      });
-    </script>
+    });
+  </script>
 </body>
 
 </html>

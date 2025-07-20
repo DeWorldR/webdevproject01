@@ -11,32 +11,97 @@
 </head>
 
 <body class="min-h-screen flex flex-col text-white bg-gray-900">
-  <!-- Header -->
-  <header class="bg-green-800 shadow-md">
-    <div class="w-full max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-white">
-        <i class="mr-2"></i>MAEJO UNIVERSITY
-      </h1>
+  <header class="bg-green-800 shadow-md fixed w-full z-50">
+    <div class="w-full px-0 md:px-4 flex justify-between items-center h-20">
+      <div class="flex items-center space-x-4 pl-2">
+        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png"
+          alt="โลโก้มหาวิทยาลัย" class="w-14 h-auto" />
+        <h1 class="text-xl md:text-2xl font-bold text-white">MAEJO UNIVERSITY</h1>
+      </div>
 
-      <nav class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:text-green-300 transition">
-          <i class="fa-solid fa-house mr-1"></i>หน้าแรก</a>
+      <nav class="hidden md:flex space-x-4 items-center text-sm md:text-base">
+        <a href="index.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-house"></i> หน้าแรก
+        </a>
+        <a href="table.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-calendar-days"></i> ตารางเรียน
+        </a>
+        <a href="main_table.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-chalkboard-user"></i> ตารางการใช้ห้อง
+        </a>
+        <a href="ex.html"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-book"></i> ปฏิทินการศึกษา
+        </a>
+
+        <!-- Language Menu -->
+        <div class="relative">
+          <a href="#" id="lang-btn-desktop" onclick="toggleLangMenuDesktop()"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-language"></i> ภาษา
+          </a>
+          <div id="lang-menu-desktop"
+            class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+            <button onclick="switchLanguage('th')"
+              class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">TH</button>
+            <button onclick="switchLanguage('en')"
+              class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">EN</button>
+          </div>
+        </div>
+
+        <!-- Login Menu -->
+        <div class="relative">
+          <a href="#" id="login-btn-desktop" onclick="toggleLoginMenuDesktop()"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-right-to-bracket"></i> เข้าสู่ระบบ
+          </a>
+          <div id="login-menu-desktop"
+            class="absolute hidden top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+            <a href="login_student.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">นักศึกษา</a>
+            <a href="login_professor.html" class="block px-4 py-2 hover:bg-green-700 rounded text-left">อาจารย์</a>
+          </div>
+        </div>
       </nav>
 
-      <button id="hamburger" class="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 p-1 bg-green-600 rounded">
-          <span class="bg-white w-6 h-0.5"></span>
-          <span class="bg-white w-6 h-0.5"></span>
-          <span class="bg-white w-6 h-0.5"></span>
+      <!-- Hamburger -->
+      <button id="hamburger"
+        class="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 p-1 bg-green-600 rounded mr-2">
+        <span class="bg-white w-6 h-0.5"></span>
+        <span class="bg-white w-6 h-0.5"></span>
+        <span class="bg-white w-6 h-0.5"></span>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-2 text-right">
-      <a href="index.html" class="hover:text-green-300 transition"><i class="fa-solid fa-house mr-1"></i>หน้าแรก</a>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-green-800 text-white px-4 py-2 space-y-2">
+      <a href="index.html" class="block text-right"><i class="fa-solid fa-house mr-2"></i>หน้าแรก</a>
+      <a href="table.html" class="block text-right"><i class="fa-solid fa-calendar-days mr-2"></i>ตารางเรียน</a>
+      <a href="main_table.html" class="block text-right"><i
+          class="fa-solid fa-chalkboard-user mr-2"></i>ตารางการใช้ห้อง</a>
+      <a href="ex.html" class="block text-right"><i class="fa-solid fa-book mr-2"></i> ปฏิทินการศึกษา</a>
+
+      <a href="#" onclick="toggleLangMenu()" class="block text-right"><i class="fa-solid fa-language mr-2"></i>ภาษา</a>
+      <div id="lang-menu-mobile" class="hidden pl-4 space-y-1">
+        <button onclick="switchLanguage('th')"
+          class="block w-full text-right px-2 py-1 bg-green-700 rounded">TH</button>
+        <button onclick="switchLanguage('en')"
+          class="block w-full text-right px-2 py-1 bg-green-700 rounded">EN</button>
+      </div>
+
+      <a href="#" onclick="toggleLoginMenu()" class="block text-right"><i
+          class="fa-solid fa-right-to-bracket mr-2"></i>เข้าสู่ระบบ</a>
+      <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
+        <a href="login_student.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">นักศึกษา</a>
+        <a href="login_professor.html" class="block w-full text-right px-2 py-1 bg-green-700 rounded">อาจารย์</a>
+      </div>
     </div>
   </header>
 
   <!-- Main -->
-  <main class="flex-grow    px-6  ">
+  <main class="flex-grow  pt-[80px] md:pt-[88px]  px-6  ">
     <section class="text-center py-14 bg-gray-900">
       <div class="max-w-2xl mx-auto px-4">
         <h2 class="text-4xl md:text-5xl font-bold text-green-500 mb-4">ปฏิทินการศึกษา</h2>
@@ -147,11 +212,11 @@
       </table>
     </div>
     <div class="flex justify-center gap-4 py-6 px-4">
-  <a href="exc.html"
-     class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-lg font-medium px-6 py-3 rounded-xl shadow transition duration-300">
-    ถัดไป <i class="fa-solid fa-arrow-right"></i>
-  </a>
-</div>
+      <a href="exc.html"
+        class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-lg font-medium px-6 py-3 rounded-xl shadow transition duration-300">
+        ถัดไป <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
 
   </main>
 
@@ -159,13 +224,54 @@
     <p class="text-gray-400 text-sm">&copy; 2025 MAEJO UNIVERSITY. All rights reserved.</p>
   </footer>
 
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+   <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        hamburger.classList.toggle('open');
+      });
+
+      function toggleLoginMenu() {
+        document.getElementById('login-menu-mobile').classList.toggle('hidden');
+      }
+
+      function toggleLangMenu() {
+        document.getElementById('lang-menu-mobile').classList.toggle('hidden');
+      }
+
+      function toggleLoginMenuDesktop() {
+        document.getElementById('login-menu-desktop').classList.toggle('hidden');
+      }
+
+      function toggleLangMenuDesktop() {
+        document.getElementById('lang-menu-desktop').classList.toggle('hidden');
+      }
+
+      function switchLanguage(lang) {
+        if (lang === 'en') {
+          alert("Switched to English (demo only)");
+        } else {
+          alert("เปลี่ยนเป็นภาษาไทยแล้ว (เดโม)");
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        const loginBtn = document.getElementById('login-btn-desktop');
+        const loginMenu = document.getElementById('login-menu-desktop');
+        const langBtn = document.getElementById('lang-btn-desktop');
+        const langMenu = document.getElementById('lang-menu-desktop');
+
+        if (!loginBtn.contains(e.target) && !loginMenu.contains(e.target)) {
+          loginMenu.classList.add('hidden');
+        }
+
+        if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+          langMenu.classList.add('hidden');
+        }
+      });
+    </script>
 </body>
 
 </html>
