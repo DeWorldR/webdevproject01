@@ -1,150 +1,161 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>REG_MJU</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-dVf3nBtXtCzROlJo1FeTj2Mj8bG+PtqJ/jEf0xOtn7Q4dPjq3+tkQiQZAGFpgNh5axHZ0yoYM+rVbZbZmGl+0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-gray-900 text-white min-h-screen">
 
-<!-- Navbar -->
-<header class="bg-black shadow-md fixed w-full z-50 rounded-lg">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-24 text-black">
+  <!-- Navbar -->
+  <header class="bg-green-800 shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
 
-    <!-- Logo + Title -->
-    <div class="flex items-center space-x-4 flex-1">
-      <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png" alt="โลโก้มหาวิทยาลัย" class="w-24 h-auto">
-      <h1 class="text-2xl font-bold text-white">MEAJO UNIVERSITY</h1>
-    </div>
+      <!-- Logo + Title -->
+      <div class="flex items-center space-x-4">
+        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/1200px-MJU_LOGO.svg.png" alt="โลโก้มหาวิทยาลัย" class="w-14 h-auto">
+        <h1 class="text-xl md:text-2xl font-bold text-white">MAEJO UNIVERSITY</h1>
+      </div>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-6 items-center text-lg">
-      <a href="#" class="border border-black  px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">หน้าแรก</a>
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-4 items-center text-sm md:text-base">
+        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-house"></i> หน้าแรก
+        </a>
 
-      <div class="relative group">
-        <button class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">เข้าสู่ระบบ</button>
-        <div class="absolute hidden group-hover:block top-full mt-2 bg-white text-black border rounded-md shadow-md p-2 space-y-2">
-          <button class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">สำหรับนักศึกษา</button>
-          <button class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">สำหรับอาจารย์</button>
+        <div class="relative group">
+          <button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-right-to-bracket"></i> เข้าสู่ระบบ
+          </button>
+          <div class="absolute hidden group-hover:block top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+            <button class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">นักศึกษา</button>
+            <button class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">อาจารย์</button>
+          </div>
         </div>
-      </div>
 
-      <a href="#" class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">ตารางเรียน</a>
-      <a href="#" class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">ตารางการใช้ห้อง</a>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-calendar-days"></i> ตารางเรียน
+        </a>
 
-      <!-- Language Switcher -->
-      <div class="relative group">
-        <button class="border border-black px-4 py-2 rounded-lg bg-yellow-300 hover:text-yellow-300">🌐ภาษา</button>
-        <div class="absolute hidden group-hover:block top-full mt-2 bg-white text-black border rounded-md shadow-md p-2 space-y-2">
-          <button onclick="switchLanguage('th')" class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">TH</button>
-          <button onclick="switchLanguage('en')" class="w-full px-4 py-2 bg-green-100 hover:bg-green-200 rounded">EN</button>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+          <i class="fa-solid fa-chalkboard-user"></i> ตารางการใช้ห้อง
+        </a>
+
+        <div class="relative group">
+          <button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition">
+            <i class="fa-solid fa-language"></i> ภาษา
+          </button>
+          <div class="absolute hidden group-hover:block top-full mt-2 bg-gray-800 text-white border border-gray-600 rounded-md shadow-md p-2 space-y-2 z-50">
+            <button onclick="switchLanguage('th')" class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">TH</button>
+            <button onclick="switchLanguage('en')" class="w-full px-4 py-2 hover:bg-green-700 rounded text-left">EN</button>
+          </div>
         </div>
+      </nav>
+
+      <!-- Hamburger Button -->
+      <button id="hamburger" class="md:hidden bg-green-600 text-white p-2 rounded text-xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-green-800 text-white px-4 py-2 space-y-2">
+      <a href="#" class="block text-right"><i class="fa-solid fa-house mr-2"></i>หน้าแรก</a>
+      <button onclick="toggleLoginMenu()" class="block w-full text-right"><i class="fa-solid fa-right-to-bracket mr-2"></i>เข้าสู่ระบบ</button>
+      <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
+        <button class="block w-full text-right px-2 py-1 bg-green-700 rounded">นักศึกษา</button>
+        <button class="block w-full text-right px-2 py-1 bg-green-700 rounded">อาจารย์</button>
       </div>
-    </nav>
-
-    <!-- Hamburger Button -->
-    <button id="hamburger" class="md:hidden bg-yellow-400 text-black p-2 rounded">☰</button>
-  </div>
-  
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white text-black px-4 py-2 space-y-2">
-    <a href="#" class="block text-right">หน้าแรก</a>
-    <button onclick="toggleLoginMenu()" class="block w-full text-right">เข้าสู่ระบบ</button>
-    <div id="login-menu-mobile" class="hidden pl-4 space-y-1">
-      <button class="block w-full text-right px-2 py-1 bg-green-100 rounded">นักศึกษา</button>
-      <button class="block w-full text-right px-2 py-1 bg-green-100 rounded">อาจารย์</button>
-    </div>
-    <a href="#" class="block text-right">ตารางเรียน</a>
-    <a href="#" class="block text-right">ตารางการใช้ห้อง</a>
-    <button onclick="toggleLangMenu()" class="block w-full text-right">🌐ภาษา</button>
-    <div id="lang-menu-mobile" class="hidden pl-4 space-y-1">
-      <button onclick="switchLanguage('th')" class="block w-full text-right px-2 py-1 bg-green-100 rounded">TH</button>
-      <button onclick="switchLanguage('en')" class="block w-full text-right px-2 py-1 bg-green-100 rounded">EN</button>
-    </div>
-  </div>
-</header>
-
-<!-- Main Content -->
-<main class="fixed w-full z-50 rounded-lg">
-  <div class="w-full px-0 mt-24">
-  <section class="bg-gray-900 border border rounded-lg px-2 text-center py-8 mx-auto">
-    <h2 class="text-lg md:text-3xl lg:text-4xl font-extrabold  text-green-500 leading-tight">
-      ยินดีต้อนรับเข้าสู่ระบบบริการการศึกษา<br>มหาวิทยาลัยแม่โจ้
-    </h2>
-    </div>
-  </section>
-
-    <section class="overflow-hidden bg-yellow-100 shadow rounded">
-      <div class="w-full whitespace-nowrap slide-left flex space-x-10 px-4 py-3 text-green-800 text-xl">
-        <span>📌 เปิดระบบเพิ่ม-ถอน รายวิชา ตั้งแต่ 25-31 มิถุนายน 2568</span>
-        <span>📢 แจ้งปิดปรับปรุงระบบช่วง 20-21 กรกฎาคม 2568 </span>
-        <span>🎓 พิธีไหว้ครูประจำปีการศึกษา 2568 วันพฤหัสบดีที่ 31 กรกฎาคม 2568 </span>
+      <a href="#" class="block text-right"><i class="fa-solid fa-calendar-days mr-2"></i>ตารางเรียน</a>
+      <a href="#" class="block text-right"><i class="fa-solid fa-chalkboard-user mr-2"></i>ตารางการใช้ห้อง</a>
+      <button onclick="toggleLangMenu()" class="block w-full text-right"><i class="fa-solid fa-language mr-2"></i>ภาษา</button>
+      <div id="lang-menu-mobile" class="hidden pl-4 space-y-1">
+        <button onclick="switchLanguage('th')" class="block w-full text-right px-2 py-1 bg-green-700 rounded">TH</button>
+        <button onclick="switchLanguage('en')" class="block w-full text-right px-2 py-1 bg-green-700 rounded">EN</button>
       </div>
-    </section>
- 
-<section class="bg-white p-6 rounded shadow-lg w-full mb-6">
-  <h3 class="text-2xl font-semibold mb-4">📢 ประกาศ / ข่าวเพิ่มเติม</h3>
-  <div class="overflow-x-auto whitespace-nowrap snap-x snap-mandatory flex gap-4">
-    <!-- รูปที่ 1 -->
-    <img src="https://via.placeholder.com/300x200" class="w-72 h-48 rounded-lg shadow-md snap-start" alt="img1">
-    <!-- รูปที่ 2 -->
-    <img src="https://via.placeholder.com/300x200" class="w-72 h-48 rounded-lg shadow-md snap-start" alt="img2">
-    <!-- รูปที่ 3 -->
-    <img src="https://via.placeholder.com/300x200" class="w-72 h-48 rounded-lg shadow-md snap-start" alt="img3">
-    <!-- เพิ่มกี่รูปก็ได้ -->
-  </div>
-</section>
+    </div>
+  </header>
 
-  </div>
-</main>
+  <!-- Main Content -->
+  <main class="w-full pt-28 px-4">
+    <div class="w-full">
 
-<!-- JavaScript -->
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+      <!-- Welcome Section -->
+      <section class="bg-gray-800 border border-gray-700 rounded-lg px-2 text-center py-8 mx-auto mb-6">
+        <h2 class="text-lg md:text-3xl lg:text-4xl font-extrabold text-green-500 leading-tight">
+          ยินดีต้อนรับเข้าสู่ระบบบริการการศึกษา<br>มหาวิทยาลัยแม่โจ้
+        </h2>
+        <p class="text-xl text-green-400 mt-2">Welcome to the MJU Education Service System</p>
+      </section>
 
-  function toggleLoginMenu() {
-    const menu = document.getElementById('login-menu-mobile');
-    menu.classList.toggle('hidden');
-  }
+      <!-- News Ticker -->
+      <section class="overflow-hidden bg-yellow-100 rounded mb-6 shadow-md">
+        <div class="w-full whitespace-nowrap slide-left flex space-x-10 px-4 py-3 text-green-600 text-base md:text-xl">
+          <span><i class="fa-solid fa-thumbtack mr-2"></i>เปิดระบบเพิ่ม-ถอน รายวิชา ตั้งแต่ 25-31 มิถุนายน 2568</span>
+          <span><i class="fa-solid fa-triangle-exclamation mr-2"></i>แจ้งปิดปรับปรุงระบบช่วง 20-21 กรกฎาคม 2568</span>
+          <span><i class="fa-solid fa-graduation-cap mr-2"></i>พิธีไหว้ครูประจำปีการศึกษา 2568 วันพฤหัสบดีที่ 31 กรกฎาคม 2568</span>
+        </div>
+      </section>
 
-  function toggleLangMenu() {
-    const menu = document.getElementById('lang-menu-mobile');
-    menu.classList.toggle('hidden');
-  }
+      <!-- Announcements Section -->
+      <section class="bg-gray-800 p-6 rounded-lg shadow-md w-full mb-6">
+        <h3 class="text-3xl font-bold text-center mb-6 text-green-500"><i class="fa-solid fa-bullhorn mr-2"></i>ประกาศข่าวสาร</h3>
+        <div class="flex flex-col items-center gap-6">
+          <img src="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline"
+               class="w-full max-w-4xl h-auto rounded-lg shadow-xl object-contain" alt="img1">
+          <img src="https://erp.mju.ac.th/openFile.aspx?id=NjkyMjYx&method=inline"
+               class="w-full max-w-4xl h-auto rounded-lg shadow-xl object-contain" alt="img2">
+          <img src="https://erp.mju.ac.th/openFile.aspx?id=NjQ1MDIz&method=inline"
+               class="w-full max-w-4xl h-auto rounded-lg shadow-xl object-contain" alt="img3">
+        </div>
+      </section>
 
-  function switchLanguage(lang) {
-    if (lang === 'en') {
-      alert("Switched to English (demo only)");
-    } else {
-      alert("เปลี่ยนเป็นภาษาไทยแล้ว (เดโม)");
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-center py-6 text-white">
+    <p>&copy; 2025 MAEJO UNIVERSITY. All rights reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function toggleLoginMenu() {
+      document.getElementById('login-menu-mobile').classList.toggle('hidden');
     }
-    // เพิ่มระบบโหลดภาษาในอนาคตได้
-  }
-</script>
 
-<!-- CSS -->
- <style>
-  @keyframes slideLeft {
-    0% {
-      transform: translateX(100%);
+    function toggleLangMenu() {
+      document.getElementById('lang-menu-mobile').classList.toggle('hidden');
     }
-    100% {
-      transform: translateX(-100%);
+
+    function switchLanguage(lang) {
+      if (lang === 'en') {
+        alert("Switched to English (demo only)");
+      } else {
+        alert("เปลี่ยนเป็นภาษาไทยแล้ว (เดโม)");
+      }
     }
-  }
+  </script>
 
-  .slide-left {
-    animation: slideLeft 15s linear infinite;
-  }
-</style>
-
-
-
+  <!-- CSS Animation -->
+  <style>
+    @keyframes slideLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .slide-left {
+      animation: slideLeft 15s linear infinite;
+    }
+  </style>
 </body>
 </html>
